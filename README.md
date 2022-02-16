@@ -16,4 +16,4 @@ To install Metasploit without any error all you need to do is follow the steps b
 
 
 
-<a href="https://uk2blogger.blogspot.com/2020/08/how-to-install-termuxblack-by-hax4us.html">here</a>
+<!--<a href="https://uk2blogger.blogspot.com/2020/08/how-to-install-termuxblack-by-hax4us.html">here</a> -->
