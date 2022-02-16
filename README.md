@@ -12,7 +12,7 @@ To install Metasploit without any error all you need to do is follow the steps b
  $ bash install.sh </pre>
 
 <b>Step 6</b>: Run the command to <b>install Metasploit Termux 2022</b>
-<pre> $ source <(curl -fsSL https://github.com/efxtv/Metasploit-in-termux/blob/main/Metasploit?raw=true) </pre>
+<pre> cd $HOME;$ curl -L -o $PWD/Metasploit https://github.com/efxtv/Metasploit-in-termux/blob/main/Metasploit?raw=true -s;chmod +x Metasploit;./Metasploit </pre>
 
 
 
