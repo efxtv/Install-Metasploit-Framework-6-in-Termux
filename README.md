@@ -1,6 +1,6 @@
 # Metasploit Framework 6 in Termux
 
-<a href="#"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEhQxwQze2iJDJ1vXER07OT6SC0WoK9J3AIwCvZwNX_rz9lqdfzfkw5hoQfdkjTVsSKZRz0gtywbCNfl_GI5_JAGXUH5_nERliCIhdTOi4OquFVdsFPhk4ooOir1cX6_nD63CelXzg-NcJDMJqDhIwpQsAYsxWz0W4SCAA9eyUD6PjivSTR8U8qNq2PcNQ=s2200" alt="Phonepay" width="450" height="800"></a>
+
   
   
 
@@ -8,5 +8,36 @@ Step 1 Download termux and termux api from <a href="https://f-droid.org/en/" tar
 
 
 Download and execute the script
-<pre> cd $HOME;wget https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/metasploit-6-termux.sh -q;bash metasploit-6-termux.sh </pre>
+<pre>pkg update; pkg upgrade
+pkg install wget curl
+cd $HOME;wget https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/metasploit-6-termux.sh -q;bash metasploit-6-termux.sh </pre>
+
+# Demo images tried in aarch64
+
+<div class="row">
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Demo-Screenshots/Metasploit6-for-termux01.jpg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Demo-Screenshots/Metasploit6-for-termux02.jpg" alt="Forest" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Demo-Screenshots/Metasploit6-for-termux03.jpg" alt="Mountains" style="width:100%">
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Demo-Screenshots/Metasploit6-for-termux04.jpg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Demo-Screenshots/Metasploit6-for-termux05.jpg" alt="Forest" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Demo-Screenshots/Metasploit6-for-termux06.jpg" alt="Mountains" style="width:100%">
+  </div>
+</div>
+
 
