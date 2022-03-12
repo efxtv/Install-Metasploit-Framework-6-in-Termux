@@ -1,4 +1,4 @@
-# Metasploit Framework 6 in Termux
+# How to install Metasploit Framework 6 in Termux 2022 uk2blogger
 
 
   
@@ -15,7 +15,7 @@ cd $HOME;wget https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/
 <pre>rm -rf /data/data/com.termux/files/usr/bin/msfvenom
 
 cd;cd metasploit-framework;ln -s $HOME/metasploit-framework/msfvenom /data/data/com.termux/files/usr/bin/
-# Demo images tried in aarch64</pre>
+</pre>
 
 <div class="row">
   <div class="column">
