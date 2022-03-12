@@ -12,7 +12,10 @@ Download and execute the script
 pkg install wget curl
 cd $HOME;wget https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/metasploit-6-termux.sh -q;bash metasploit-6-termux.sh </pre>
 
-# Demo images tried in aarch64
+<pre>rm -rf /data/data/com.termux/files/usr/bin/msfvenom
+
+cd;cd metasploit-framework;ln -s $HOME/metasploit-framework/msfvenom /data/data/com.termux/files/usr/bin/
+# Demo images tried in aarch64</pre>
 
 <div class="row">
   <div class="column">
