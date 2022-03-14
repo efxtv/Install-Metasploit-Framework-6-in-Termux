@@ -19,13 +19,13 @@ cd;cd metasploit-framework;ln -s $HOME/metasploit-framework/msfvenom /data/data/
 
 <div class="row">
   <div class="column">
-    <img src="https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Demo-Screenshots/Metasploit6-for-termux01.jpg" alt="Snow" style="width:100%">
+    <img src="https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Demo-Screenshots/Metasploit6-for-termux01.jpg" alt="Metasploit in termux- Metasploit benner" style="width:100%">
   </div>
   <div class="column">
-    <img src="https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Demo-Screenshots/Metasploit6-for-termux02.jpg" alt="Forest" style="width:100%">
+    <img src="https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Demo-Screenshots/Metasploit6-for-termux02.jpg" alt="Metasploit in termux- Metasploit benner" style="width:100%">
   </div>
   <div class="column">
-    <img src="https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Demo-Screenshots/Metasploit6-for-termux03.jpg" alt="Mountains" style="width:100%">
+    <img src="https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Demo-Screenshots/Metasploit6-for-termux03.jpg" alt="Metasploit in termux- Metasploit benner" style="width:100%">
   </div>
 </div>
 
@@ -33,13 +33,13 @@ cd;cd metasploit-framework;ln -s $HOME/metasploit-framework/msfvenom /data/data/
 
 <div class="row">
   <div class="column">
-    <img src="https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Demo-Screenshots/Metasploit6-for-termux04.jpg" alt="Snow" style="width:100%">
+    <img src="https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Demo-Screenshots/Metasploit6-for-termux04.jpg" alt="Metasploit in termux- Metasploit benner" style="width:100%">
   </div>
   <div class="column">
-    <img src="https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Demo-Screenshots/Metasploit6-for-termux05.jpg" alt="Forest" style="width:100%">
+    <img src="https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Demo-Screenshots/Metasploit6-for-termux05.jpg" alt="Metasploit in termux- Metasploit benner" style="width:100%">
   </div>
   <div class="column">
-    <img src="https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Demo-Screenshots/Metasploit6-for-termux06.jpg" alt="Mountains" style="width:100%">
+    <img src="https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Demo-Screenshots/Metasploit6-for-termux06.jpg" alt="Metasploit in termux- Metasploit benner" style="width:100%">
   </div>
 </div>
 
