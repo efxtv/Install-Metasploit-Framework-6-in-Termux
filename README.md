@@ -17,7 +17,7 @@ cd $HOME;wget https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/
 cd;cd metasploit-framework;ln -s $HOME/metasploit-framework/msfvenom /data/data/com.termux/files/usr/bin/
 </pre>
 
-# Openssl Error Solved
+# unsupported (OpenSSL::Cipher::CiPherError)
 After installing the Metasploit-Framework 6 in termux copy paste the everything in the home directory
 <pre>
 cd metasploit-framework;
