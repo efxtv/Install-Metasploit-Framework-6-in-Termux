@@ -17,7 +17,7 @@ echo "
                 
       FIXED BY |D|E|D|S|H|I|T| EDITED BY EFX TV
 "
-echo "[${Green}+${clear}] Have you cleaned your termux? if no script may not work..."
+echo -e "[${Green}+${clear}] Have you cleaned your termux? if no script may not work..."
 
 echo
 echo -e "[${Yellow}+${clear}] Please wait..."
@@ -28,11 +28,14 @@ echo -e "[${Yellow}+${clear}] Don't hit Enter use Y/y to update..."
 sleep 3
 clear
 pkg update;pkg upgrade
-clear
+echo
+echo -e "[${Yellow}+${clear}] Termux updated..."
+echo -e "[${Yellow}+${clear}] Please wait..."
+sleep 3
 
 #
 # Loading spinner
-echo -e "[${Yellow}+${clear}]Loading..."
+echo -e "[${Yellow}+${clear}] Loading..."
 source <(echo "c3Bpbm5lcj0oICd8JyAnLycgJy0nICdcJyApOwoKY291bnQoKXsKICBzcGluICYKICBwaWQ9JCEKICBmb3IgaSBpbiBgc2VxIDEgMTBgCiAgZG8KICAgIHNsZWVwIDE7CiAgZG9uZQoKICBraWxsICRwaWQgIAp9CgpzcGluKCl7CiAgd2hpbGUgWyAxIF0KICBkbyAKICAgIGZvciBpIGluICR7c3Bpbm5lcltAXX07IAogICAgZG8gCiAgICAgIGVjaG8gLW5lICJcciRpIjsKICAgICAgc2xlZXAgMC4yOwogICAgZG9uZTsKICBkb25lCn0KCmNvdW50" | base64 -d)
 
 echo
