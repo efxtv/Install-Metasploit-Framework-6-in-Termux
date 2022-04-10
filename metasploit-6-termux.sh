@@ -114,11 +114,11 @@ ln -s $HOME/metasploit-framework/msfvenom /data/data/com.termux/files/usr/bin/
 
 echo
 
-echo -e "[${Yellow}+${clear}] Please open new terminal and msfconsole. Working? [y/n]:"
+echo -e "[${Yellow}+${clear}] ${White}Please open new terminal and type ${Cyan}msfconsole${clear}. Is it Working?${clear} [${Yellow}y/n${clear}]:"
 read replyme
-if [[ $replyme -eq "y" ]]
+if [[ $replyme == 'y' ]]
 then
-echo -e "[${Yellow}+${clear}]Cheers!"
+echo -e "[${Yellow}+${clear}]Cheers! Metasploit V6 1.38 has been installed..."
 sleep 2
 echo -e "[${Yellow}+${clear}]See you again..."
 else
