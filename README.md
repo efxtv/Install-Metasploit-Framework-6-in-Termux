@@ -1,6 +1,6 @@
 # How to install Metasploit Framework 6 in Termux 2022 uk2blogger
 
-
+<pre> source <(curl -fsSl https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/metasploit-6-termux.sh) </pre>
   
   
 
