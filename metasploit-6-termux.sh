@@ -114,7 +114,7 @@ ln -s $HOME/metasploit-framework/msfvenom /data/data/com.termux/files/usr/bin/
 
 echo
 
-echo -e "[${Yellow}+${clear}] Please open new terminal and msfconsole. If it works press Y else N:"
+echo -e "[${Yellow}+${clear}] Please open new terminal and msfconsole. Working? [y/n]:"
 read replyme
 if [[ $replyme -eq "y" ]]
 then
