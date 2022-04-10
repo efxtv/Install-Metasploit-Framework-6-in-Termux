@@ -28,6 +28,13 @@ sleep 3
 echo -e "[${Yellow}+${clear}] Don't hit Enter use Y/y to update..."
 sleep 3
 clear
+echo -e "
+                
+      SCRIPT BY |D|E|D|S|H|I|T| EDITED BY EFX TV
+                  ${Green}[ ${Yellow}t.me/efxtv${clear} ${Green}]${clear}
+"
+echo
+sleep 3
 pkg update;pkg upgrade
 echo
 echo -e "[${Yellow}+${clear}] Termux updated..."
@@ -113,7 +120,14 @@ sed -i '442, 476 {s/^/#/};436, 438 {s/^/#/}' /data/data/com.termux/files/usr/lib
 ln -s $HOME/metasploit-framework/msfvenom /data/data/com.termux/files/usr/bin/
 
 echo
-
+clear
+echo -e "
+                
+      SCRIPT BY |D|E|D|S|H|I|T| EDITED BY EFX TV
+                  ${Green}[ ${Yellow}t.me/efxtv${clear} ${Green}]${clear}
+"
+sleep 3
+echo 
 echo -e "[${Yellow}+${clear}] ${White}Please open new terminal and type ${Cyan}msfconsole${clear}. Is it Working?${clear} [${Yellow}y/n${clear}]:"
 read replyme
 if [[ $replyme == 'y' ]]
