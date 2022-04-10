@@ -13,9 +13,10 @@ White='\033[0;37m'
 
 
 clear
-echo "
+echo -e "
                 
-      FIXED BY |D|E|D|S|H|I|T| EDITED BY EFX TV
+      SCRIPT BY |D|E|D|S|H|I|T| EDITED BY EFX TV
+                  ${Green}[ ${Yellow}t.me/efxtv${clear} ${Green}]${clear}
 "
 echo -e "[${Green}+${clear}] Have you cleaned your termux? if no script may not work..."
 
