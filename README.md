@@ -1,9 +1,14 @@
 # How to install Metasploit Framework 6 in Termux 2022 uk2blogger
+ 
+<b>Step 1</b> Download or update Termux and Termux API from <a href="https://f-droid.org/en/" target="_blank">F-Droid</a>
+
+<b>Step 2</b> copy paste the script in your termux. Update upgrade not required
 
 <pre> source <(curl -fsSl https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/metasploit-6-termux.sh) </pre>
+<img src="https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Demo-Screenshots/photo_2022-04-10_09-39-39.jpg" alt="Metasploit in termux- Metasploit benner v6.1.38-dev-c252faf" style="width:100%">
   
   
-
+# For older versions read below.... 
 Step 1 Download termux and termux api from <a href="https://f-droid.org/en/" target="_blank">F-Droid</a>
 
 
