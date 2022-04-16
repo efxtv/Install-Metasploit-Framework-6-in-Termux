@@ -5,7 +5,7 @@
 <b>Step 2</b> copy paste the script in your termux. Update upgrade not required
 
 <pre> source <(curl -fsSl https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/metasploit-6-termux.sh) </pre>
-<img src="https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Demo-Screenshots/photo_2022-04-10_09-39-39.jpg" alt="Metasploit in termux- Metasploit benner v6.1.39-dev-c252faf" style="width:100%"><br><br>
+<img src="https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Demo-Screenshots/metasploit-in-termux-6.1.39.png" alt="Metasploit in termux- Metasploit benner v6.1.39-dev" style="width:100%"><br><br>
 <img src="https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Demo-Screenshots/photo_2022-04-10_09-39-39.jpg" alt="Metasploit in termux- Metasploit benner v6.1.39-dev-c252faf" style="width:100%">
   
   
