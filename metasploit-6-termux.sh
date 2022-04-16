@@ -18,7 +18,15 @@ echo -e "
       SCRIPT BY |D|E|D|S|H|I|T| EDITED BY EFX TV
                   ${Green}[ ${Yellow}t.me/efxtv${clear} ${Green}]${clear}
 "
-echo -e "[${Green}+${clear}] Have you cleaned your termux? if no script may not work..."
+echo -e "[${Green}+${clear}] This time you do not have to clean your termux..."
+sleep 1
+echo -e "[${Green}+${clear}] I'll manage all..."
+sleep 1
+echo -e "[${Green}+${clear}] Removing ${Red}metasploit-framework${clear} directory ..."
+cd $HOME
+rm -rf metasploit-framework 2>log.txt
+rm log.txt
+echo -e "[${Green}+${clear}] Done..."
 
 echo
 echo -e "[${Yellow}+${clear}] Please wait..."
