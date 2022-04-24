@@ -140,7 +140,7 @@ echo -e "[${Yellow}+${clear}] ${White} Please open new terminal and type ${Cyan}
 read replyme
 if [[ $replyme == 'y' ]]
 then
-echo -e "[${Yellow}+${clear}] Cheers! Metasploit V6 1.38 has been installed..."
+echo -e "[${Yellow}+${clear}] Cheers! Metasploit V6 1.40 has been installed..."
 sleep 2
 echo -e "[${Yellow}+${clear}] See you again..."
 else
@@ -153,7 +153,7 @@ echo -e "[${Yellow}+${clear}] Fixing...."
 echo -e "[${Yellow}+${clear}] Almost fixed...."
   sleep 3
 sed -i '13,14 {s/^/#/}' /data/data/com.termux/files/usr/lib/ruby/gems/3.1.0/gems/hrr_rb_ssh-0.4.2/lib/hrr_rb_ssh/transport/encryption_algorithm/functionable.rb;sed -i '15 {s/^/#/}' /data/data/com.termux/files/usr/lib/ruby/gems/3.1.0/gems/hrr_rb_ssh-0.4.2/lib/hrr_rb_ssh/transport/encryption_algorithm/functionable.rb;sed -i '14 {s/^/#/}' /data/data/com.termux/files/usr/lib/ruby/gems/3.1.0/gems/hrr_rb_ssh-0.4.2/lib/hrr_rb_ssh/transport/server_host_key_algorithm/ecdsa_sha2_nistp256.rb;sed -i '14 {s/^/#/}' /data/data/com.termux/files/usr/lib/ruby/gems/3.1.0/gems/hrr_rb_ssh-0.4.2/lib/hrr_rb_ssh/transport/server_host_key_algorithm/ecdsa_sha2_nistp384.rb;sed -i '14 {s/^/#/}' /data/data/com.termux/files/usr/lib/ruby/gems/3.1.0/gems/hrr_rb_ssh-0.4.2/lib/hrr_rb_ssh/transport/server_host_key_algorithm/ecdsa_sha2_nistp521.rb
-
+echo -e "[${Yellow}+${clear}] Cheers! Metasploit V6 1.40 has been installed..."
 echo
 echo -e "[${Yellow}+${clear}] ------------Try msfconsole..."
 fi
