@@ -1,0 +1,131 @@
+clear='\033[0m'
+Black='\033[0;30m'
+Red='\033[0;31m'
+Green='\033[0;32m'
+Yellow='\033[0;33m'
+Blue='\033[0;34m'
+Purple='\033[0;35m'
+Cyan='\033[0;36m'
+White='\033[0;37m'
+latestver()
+{
+curl https://raw.githubusercontent.com/rapid7/metasploit-framework/master/Gemfile.lock -s|grep metasploit-framework|head -1|sed 's/ //g'|tr '[:lower:]' '[:upper:]'|sed 's#(# #g;s#)##g;s# #: #g'|awk '{print $2}'
+}
+
+help()
+{
+clear='\033[0m'
+Black='\033[0;30m'
+Red='\033[0;31m'
+Green='\033[0;32m'
+Yellow='\033[0;33m'
+Blue='\033[0;34m'
+Purple='\033[0;35m'
+Cyan='\033[0;36m'
+White='\033[0;37m'
+echo -e "${Green} -${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}- ${clear}"
+echo -e "${Green}[ ${Yellow}Metasploit update${clear}${Green} ]${clear}"
+echo -e "${Green} -${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}- ${clear}"
+echo "help check install demo"|sed 's# #\n#g'|sed "s#^#$(tput setaf 2)[$(tput sgr0)$(tput setaf 10)✔$(tput sgr0)$(tput setaf 2)]$(tput sgr0) #g"
+}
+
+demo()
+{
+clear='\033[0m'
+Black='\033[0;30m'
+Red='\033[0;31m'
+Green='\033[0;32m'
+Yellow='\033[0;33m'
+Blue='\033[0;34m'
+Purple='\033[0;35m'
+Cyan='\033[0;36m'
+White='\033[0;37m'
+echo "LHOST WHOST LHBind WHBind"|sed 's# #\n#g'|sed "s#^#$(tput setaf 2)[$(tput sgr0)$(tput setaf 10)✔$(tput sgr0)$(tput setaf 2)]$(tput sgr0) #g"
+echo -en "$(tput setaf 2)[$(tput sgr0)$(tput setaf 10)✔$(tput sgr0)$(tput setaf 2)]$(tput sgr0) Please type input: "
+read op
+case $op in
+LHOST)
+  echo -e "${Green}Your pressed LHOST${clean}"
+  source <(curl -fsSl https://raw.githubusercontent.com/efxtv/Payloads/main/Demo/LANAndroid.sh);;
+  
+WHOST)
+  echo -e "${Green}Your pressed LHOST VHOST${clean}"
+  source <(curl -fsSl https://raw.githubusercontent.com/efxtv/Payloads/main/Demo/WANAndroid.sh);;
+  
+LHBind)
+  echo -e "${Green}You pressed LHBind${clean}"
+  source <(curl -fsSl https://raw.githubusercontent.com/efxtv/Payloads/main/Demo/LBIND.sh);;
+WHBind)
+  echo -e "${Green}You pressed VHBind${clean}"
+  source <(curl -fsSl https://raw.githubusercontent.com/efxtv/Payloads/main/Demo/WBIND.sh);;
+*)
+  echo -e "$(tput setaf 2)[$(tput sgr0)$(tput setaf 1)✗$(tput sgr0)$(tput setaf 2)]$(tput sgr0) ${Red}No no no !! Wrong input";;
+esac
+
+}
+
+installedver()
+{
+cat $HOME/metasploit-framework/Gemfile.lock|grep metasploit-framework|head -1|sed 's/ //g'|tr '[:lower:]' '[:upper:]'|sed 's#(# #g;s#)##g;s# #: #g'|awk '{print $2}'
+}
+
+versioncheckplusupdate()
+{
+clear='\033[0m'
+Black='\033[0;30m'
+Red='\033[0;31m'
+Green='\033[0;32m'
+Yellow='\033[0;33m'
+Blue='\033[0;34m'
+Purple='\033[0;35m'
+Cyan='\033[0;36m'
+White='\033[0;37m'
+
+latest=$(latestver)
+instal=$(installedver)
+if [ "$latest" == "$instal" ]; then
+echo "Checking for metasploit updates...";sleep 4;printf "Metasploit-Framework latest version installed: ";curl https://raw.githubusercontent.com/rapid7/metasploit-framework/master/Gemfile.lock -s|grep metasploit-framework|head -1|sed 's/ //g'|tr '[:lower:]' '[:upper:]'|sed 's#(# #g;s#)##g;s# #: #g'|awk '{print "\033[0;32m"$2 "\033[0m"}'
+echo
+
+else
+echo -e "[${Green}+${clear}] Checking for metasploit updates...";sleep 4;echo -e -e "[${Green}+${clear}] Update found: \c ";curl https://raw.githubusercontent.com/rapid7/metasploit-framework/master/Gemfile.lock -s|grep metasploit-framework|head -1|sed 's/ //g'|tr '[:lower:]' '[:upper:]'|sed 's#(# #g;s#)##g;s# #: #g'|awk '{print "\033[0;31m"$2 "\033[0m"}'
+
+#Install latest version
+echo -en "[${Green}+${clear}] Would you like to update? yY/nN: "
+read upd
+if [ "$upd" == "y" ]; then
+echo -e "[${Green}+${clear}] Okay"
+sleep 1
+echo -e "[${Green}+${clear}] calling script..."
+sleep 3
+echo -e "[${Green}+${clear}] lets install metasploit $latest "
+sleep 3
+source <(curl -fsSl https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/metasploit-6-termux.sh)
+else
+echo "No problem see you again :)"
+fi
+fi
+}
+
+
+#---------------------------------------------------------variables
+
+if [[ $1 == "check" || $1 == "01" ]];
+then
+versioncheckplusupdate 2> /dev/null
+  
+elif [[ $1 == "install" || $soun == "02" ]];
+then
+echo factivate
+
+elif [[ $1 == "-help" || $1 == "03" ]];
+then
+help
+
+elif [[ $1 == "demo" || $1 == "04" ]];
+then
+demo
+
+else
+echo "Wrong input use -help for more"
+fi
