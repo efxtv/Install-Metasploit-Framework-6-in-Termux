@@ -8,6 +8,7 @@ To Install Metasploit  In Termux Without Error this time you do not have to refr
 
 <pre> source <(curl -fsSl https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/metasploit-6-termux.sh) </pre>
 
+If you already have installed metasploit6 in termux and you want metasploit with updated version must give it a try.
 # Metasploit6 updater for termux
 <pre> curl -L -o $PWD/mversion https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Scripts/mversion -s;chmod +x mversion;mv mversion ../usr/bin/ </pre>
 
