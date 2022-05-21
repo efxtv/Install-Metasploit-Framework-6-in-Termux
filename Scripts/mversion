@@ -84,7 +84,9 @@ White='\033[0;37m'
 latest=$(latestver)
 instal=$(installedver)
 if [ "$latest" == "$instal" ]; then
-echo "Checking for metasploit updates...";sleep 4;printf "Metasploit-Framework latest version installed: ";curl https://raw.githubusercontent.com/rapid7/metasploit-framework/master/Gemfile.lock -s|grep metasploit-framework|head -1|sed 's/ //g'|tr '[:lower:]' '[:upper:]'|sed 's#(# #g;s#)##g;s# #: #g'|awk '{print "\033[0;32m"$2 "\033[0m"}'
+echo -e "[${Green}+${clear}] Checking for metasploit updates..."
+sleep 4
+printf "[${Green}+${clear}] Metasploit-Framework latest version installed: ";curl https://raw.githubusercontent.com/rapid7/metasploit-framework/master/Gemfile.lock -s|grep metasploit-framework|head -1|sed 's/ //g'|tr '[:lower:]' '[:upper:]'|sed 's#(# #g;s#)##g;s# #: #g'|awk '{print "\033[0;32m"$2 "\033[0m"}'
 echo
 
 else
