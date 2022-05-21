@@ -137,8 +137,8 @@ echo -e "
 "
 sleep 3
 echo 
-echo -e "[${Yellow}+${clear}] ${White} Please open new terminal and type ${Cyan}msfconsole${clear}. Is it Working?${clear} [${Yellow}y/n${clear}]:"
-read replyme
+#echo -e "[${Yellow}+${clear}] ${White} Please open new terminal and type ${Cyan}msfconsole${clear}. Is it Working?${clear} [${Yellow}y/n${clear}]:"
+#read replyme
 #if [[ $replyme == 'y' ]]
 #then
 #echo -e "[${Yellow}+${clear}] Cheers! Metasploit6 has been installed..."
@@ -147,7 +147,7 @@ read replyme
 #else
 #echo -e "[${Red}+${clear}]${Red} I'm sorry you pressed no...${clear} "
 sleep 1
-echo -e "[${Yellow}+${clear}] Fixing...."
+echo -e "[${Yellow}+${clear}] Fixing metasploit...."
   sleep 3
 echo -e "[${Yellow}+${clear}] Fixing...."
   sleep 3
@@ -157,4 +157,5 @@ sed -i '13,14 {s/^/#/}' /data/data/com.termux/files/usr/lib/ruby/gems/3.1.0/gems
 echo -e "[${Yellow}+${clear}] Cheers! Metasploit6 has been installed..."
 echo
 echo -e "[${Yellow}+${clear}] ------------run msfconsole..."
+
 fi
