@@ -24,8 +24,8 @@ echo -e "[${Green}+${clear}] I'll manage all..."
 sleep 1
 echo -e "[${Green}+${clear}] Removing ${Red}metasploit-framework${clear} directory ..."
 cd $HOME
-rm -rf metasploit-framework 2>log.txt
-rm log.txt
+rm -rf metasploit-framework 2>.log.txt
+#rm log.txt
 echo -e "[${Green}+${clear}] Done..."
 
 echo
@@ -44,6 +44,7 @@ echo -e "
 echo
 sleep 3
 pkg update;pkg upgrade
+apt update;apt upgrade
 echo
 echo -e "[${Yellow}+${clear}] Termux updated..."
 echo -e "[${Yellow}+${clear}] Please wait..."
