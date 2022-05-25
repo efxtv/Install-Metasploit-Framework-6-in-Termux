@@ -137,12 +137,13 @@ echo -e "
 "
 sleep 3
 echo 
-echo -en "[${Yellow}+${clear}] ${White} Press enter to fix ${Cyan}msfconsole${clear}:"
+echo -en "[${Yellow}+${clear}] ${White}Press ${Green}ENTER key to fix${clear}:"
 read replyme
 if [[ $replyme == "" ]]
 then
-echo -e "[${Red}+${clear}]${Red} I'm sorry you pressed no...${clear} "
-echo -e "[${Yellow}+${clear}] Fixing metasploit...."
+echo -e "[${Yellow}+${clear}] Okay got it..."
+
+echo -e "[${Yellow}+${clear}] Fixing metasploit..."
   sleep 3
 echo -e "[${Yellow}+${clear}] Fixing...."
   sleep 3
