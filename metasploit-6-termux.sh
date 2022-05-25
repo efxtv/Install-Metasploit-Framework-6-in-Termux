@@ -137,14 +137,13 @@ echo -e "
 "
 sleep 3
 echo 
-#echo -e "[${Yellow}+${clear}] ${White} Please open new terminal and type ${Cyan}msfconsole${clear}. Is it Working?${clear} [${Yellow}y/n${clear}]:"
-#read replyme
-#if [[ $replyme == 'y' ]]
-#then
-#echo -e "[${Yellow}+${clear}] Cheers! Metasploit6 has been installed..."
-#echo -e "[${Yellow}+${clear}] See you again..."
-#else
-#echo -e "[${Red}+${clear}]${Red} I'm sorry you pressed no...${clear} "
+echo -en "[${Yellow}+${clear}] ${White} Press enter to fix ${Cyan}msfconsole${clear}:"
+read replyme
+if [[ $replyme == '' ]]
+then
+echo ""
+else
+echo -e "[${Red}+${clear}]${Red} I'm sorry you pressed no...${clear} "
 echo -e "[${Yellow}+${clear}] Fixing metasploit...."
   sleep 3
 echo -e "[${Yellow}+${clear}] Fixing...."
@@ -154,6 +153,6 @@ echo -e "[${Yellow}+${clear}] Almost fixed...."
 sed -i '13,14 {s/^/#/}' /data/data/com.termux/files/usr/lib/ruby/gems/3.1.0/gems/hrr_rb_ssh-0.4.2/lib/hrr_rb_ssh/transport/encryption_algorithm/functionable.rb;sed -i '15 {s/^/#/}' /data/data/com.termux/files/usr/lib/ruby/gems/3.1.0/gems/hrr_rb_ssh-0.4.2/lib/hrr_rb_ssh/transport/encryption_algorithm/functionable.rb;sed -i '14 {s/^/#/}' /data/data/com.termux/files/usr/lib/ruby/gems/3.1.0/gems/hrr_rb_ssh-0.4.2/lib/hrr_rb_ssh/transport/server_host_key_algorithm/ecdsa_sha2_nistp256.rb;sed -i '14 {s/^/#/}' /data/data/com.termux/files/usr/lib/ruby/gems/3.1.0/gems/hrr_rb_ssh-0.4.2/lib/hrr_rb_ssh/transport/server_host_key_algorithm/ecdsa_sha2_nistp384.rb;sed -i '14 {s/^/#/}' /data/data/com.termux/files/usr/lib/ruby/gems/3.1.0/gems/hrr_rb_ssh-0.4.2/lib/hrr_rb_ssh/transport/server_host_key_algorithm/ecdsa_sha2_nistp521.rb
 echo -e "[${Yellow}+${clear}] Cheers! Metasploit6 has been installed..."
 echo
-echo -e "[${Yellow}+${clear}] ------------run ${Yellow}msfconsole..."
+echo -e "[${Yellow}+${clear}] ------------run ${Yellow}msfconsole${clear}..."
 
-#fi
+fi
