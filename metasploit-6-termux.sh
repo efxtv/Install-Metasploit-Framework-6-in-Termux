@@ -137,15 +137,15 @@ echo -e "
 "
 sleep 3
 echo 
-#echo -e "[${Yellow}+${clear}] ${White} Please open new terminal and type ${Cyan}msfconsole${clear}. Is it Working?${clear} [${Yellow}y/n${clear}]:"
-#read replyme
-#if [[ $replyme == 'y' ]]
-#then
-#echo -e "[${Yellow}+${clear}] Cheers! Metasploit6 has been installed..."
-#sleep 2
-#echo -e "[${Yellow}+${clear}] See you again..."
-#else
-#echo -e "[${Red}+${clear}]${Red} I'm sorry you pressed no...${clear} "
+echo -e "[${Yellow}+${clear}] ${White} Please open new terminal and type ${Cyan}msfconsole${clear}. Is it Working?${clear} [${Yellow}y/n${clear}]:"
+read replyme
+if [[ $replyme == 'y' ]]
+then
+echo -e "[${Yellow}+${clear}] Cheers! Metasploit6 has been installed..."
+sleep 2
+echo -e "[${Yellow}+${clear}] See you again..."
+else
+echo -e "[${Red}+${clear}]${Red} I'm sorry you pressed no...${clear} "
 sleep 1
 echo -e "[${Yellow}+${clear}] Fixing metasploit...."
   sleep 3
@@ -158,5 +158,4 @@ echo -e "[${Yellow}+${clear}] Cheers! Metasploit6 has been installed..."
 echo
 echo -e "[${Yellow}+${clear}] ------------run msfconsole..."
 
-fi
 fi
