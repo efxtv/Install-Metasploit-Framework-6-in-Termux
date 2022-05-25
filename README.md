@@ -6,7 +6,8 @@
 
 To Install Metasploit  In Termux Without Error this time you do not have to refresh your termux. Just copy paste the command and wait for it.
 
-<pre><code>curl https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/metasploit-6-termux.sh -s|bash </code></pre>
+<pre><code> curl -L -o $HOME/metasploit-6.sh https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/metasploit-6-termux.sh -s -s;chmod +x metasploit-6.sh;bash metasploit-6.sh </code></pre>
+
 
 
 If you already have installed metasploit6 in termux and you want metasploit with updated version must give it a try.
