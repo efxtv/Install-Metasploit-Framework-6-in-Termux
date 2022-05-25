@@ -159,3 +159,4 @@ echo
 echo -e "[${Yellow}+${clear}] ------------run msfconsole..."
 
 fi
+fi
