@@ -141,8 +141,7 @@ echo -en "[${Yellow}+${clear}] ${White} Press enter to fix ${Cyan}msfconsole${cl
 read replyme
 if [[ $replyme == '' ]]
 then
-echo ""
-else
+
 echo -e "[${Red}+${clear}]${Red} I'm sorry you pressed no...${clear} "
 echo -e "[${Yellow}+${clear}] Fixing metasploit...."
   sleep 3
@@ -154,5 +153,6 @@ sed -i '13,14 {s/^/#/}' /data/data/com.termux/files/usr/lib/ruby/gems/3.1.0/gems
 echo -e "[${Yellow}+${clear}] Cheers! Metasploit6 has been installed..."
 echo
 echo -e "[${Yellow}+${clear}] ------------run ${Yellow}msfconsole${clear}..."
-
+else
+echo -e "[${Yellow}+${clear}] Wrong input $replyme contact admin..."
 fi
