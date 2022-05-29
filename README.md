@@ -20,7 +20,7 @@ If you already have installed metasploit6 in termux and you want metasploit with
 <img src="https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Demo-Screenshots/photo_2022-04-10_09-39-39.jpg" alt="Metasploit in termux- Metasploit benner v6.1.40-dev-c252faf" style="width:100%">
   
   
-# For older versions read below.... 
+# How to install metasploit6 in termux
 Step 1 Download termux and termux api from <a href="https://f-droid.org/en/" target="_blank">F-Droid</a>
 
 
