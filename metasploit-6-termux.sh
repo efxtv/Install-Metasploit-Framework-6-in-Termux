@@ -25,7 +25,7 @@ sleep 1
 echo -e "[${Green}+${clear}] Removing ${Red}metasploit-framework${clear} directory ..."
 cd $HOME
 rm -rf metasploit-framework 2>.log.txt
-mkdir metasploit-framework
+mkdir metasploit-framework 2>.log.txt
 #rm log.txt
 echo -e "[${Green}+${clear}] Done..."
 
