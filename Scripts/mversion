@@ -118,7 +118,7 @@ versioncheckplusupdate 2> /dev/null
   
 elif [[ $1 == "install" || $soun == "02" ]];
 then
-echo factivate
+ source <(curl -fsSL https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/metasploit-6-termux.sh) 
 
 elif [[ $1 == "-help" || $1 == "03" ]];
 then
