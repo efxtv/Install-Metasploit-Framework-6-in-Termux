@@ -138,7 +138,7 @@ echo -e "
 "
 sleep 3
 echo 
-echo -en "[${Yellow}+${clear}] ${White}Press ${Green}ENTER key to fix${clear}:"
+echo -en "[${Yellow}+${clear}] ${White}Press ${Green}ENTER button to fix${clear}:"
 read replyme
 if [[ $replyme == "" ]]
 then
