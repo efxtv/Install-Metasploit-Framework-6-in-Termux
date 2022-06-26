@@ -8,22 +8,70 @@ Blue='\033[0;34m'
 Purple='\033[0;35m'
 Cyan='\033[0;36m'
 White='\033[0;37m'
+isntaal()
+{
+ctermuxorlinux=$(which bash|grep -o termux)
+if [ "$termuxorlinux" == "termux" ]; then
+echo -e "\t${IGreen} ${clear} ${Green}Installing metasploit in termux...${clear}"
+sleep 3
+source <(curl -fsSL https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/metasploit-6-termux.sh)
+else
+echo -e "\t${IGreen}├──${clear} ${Green}Installing metasploit in Linux  ${clear}"
+echo -e "\t${IGreen}└──${clear} ${Green}Please wait...${clear}"
+sleep 3
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && \
+  chmod 755 msfinstall && \
+  ./msfinstall
+fi
+}
+
 latestver()
 {
 curl https://raw.githubusercontent.com/rapid7/metasploit-framework/master/Gemfile.lock -s|grep metasploit-framework|head -1|sed 's/ //g'|tr '[:lower:]' '[:upper:]'|sed 's#(# #g;s#)##g;s# #: #g'|awk '{print $2}'
 }
+installedver()
+{
+ctermuxorlinux=$(which bash|grep -o termux)
+if [ "$termuxorlinux" == "termux" ]; then
+cat $HOME/metasploit-framework/Gemfile.lock|grep metasploit-framework|head -1|sed 's/ //g'|tr '[:lower:]' '[:upper:]'|sed 's#(# #g;s#)##g;s# #: #g'|awk '{print $2}'
+else
+cat /opt/metasploit-framework/embedded/framework/Gemfile.lock|grep metasploit-framework|head -1|sed 's/ //g'|tr '[:lower:]' '[:upper:]'|sed 's#(# #g;s#)##g;s# #: #g'|awk '{print $2}'
+
+fi
+}
+
+versioncheckplusupdate()
+{
+latest=$(latestver)
+instal=$(installedver)
+if [ "$latest" == "$instal" ]; then
+echo -e "[${Green}+${clear}] Checking for metasploit updates..."
+sleep 4
+printf "[${Green}+${clear}] Metasploit-Framework latest version installed: ";curl https://raw.githubusercontent.com/rapid7/metasploit-framework/master/Gemfile.lock -s|grep metasploit-framework|head -1|sed 's/ //g'|tr '[:lower:]' '[:upper:]'|sed 's#(# #g;s#)##g;s# #: #g'|awk '{print "\033[0;32m"$2 "\033[0m"}'
+echo
+
+else
+echo -e "[${Green}+${clear}] Checking for metasploit updates...";sleep 4;echo -e -e "[${Green}+${clear}] Update found: \c ";curl https://raw.githubusercontent.com/rapid7/metasploit-framework/master/Gemfile.lock -s|grep metasploit-framework|head -1|sed 's/ //g'|tr '[:lower:]' '[:upper:]'|sed 's#(# #g;s#)##g;s# #: #g'|awk '{print "\033[0;31m"$2 "\033[0m"}'
+
+#Install latest version
+echo -en "[${Green}+${clear}] Would you like to update? yY/nN: "
+read upd
+if [ "$upd" == "y" ]; then
+echo -e "[${Green}+${clear}] Okay"
+sleep 1
+echo -e "[${Green}+${clear}] calling script..."
+sleep 3
+echo -e "[${Green}+${clear}] lets install metasploit $latest "
+sleep 3
+isntaal
+else
+echo "No problem see you again :)"
+fi
+fi
+}
 
 help()
 {
-clear='\033[0m'
-Black='\033[0;30m'
-Red='\033[0;31m'
-Green='\033[0;32m'
-Yellow='\033[0;33m'
-Blue='\033[0;34m'
-Purple='\033[0;35m'
-Cyan='\033[0;36m'
-White='\033[0;37m'
 echo -e "${Green} -${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}- ${clear}"
 echo -e "${Green}[ ${Yellow}Metasploit update${clear}${Green} ]${clear}"
 echo -e "${Green} -${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}- ${clear}"
@@ -32,15 +80,6 @@ echo "help check install demo"|sed 's# #\n#g'|sed "s#^#$(tput setaf 2)[$(tput sg
 
 demo()
 {
-clear='\033[0m'
-Black='\033[0;30m'
-Red='\033[0;31m'
-Green='\033[0;32m'
-Yellow='\033[0;33m'
-Blue='\033[0;34m'
-Purple='\033[0;35m'
-Cyan='\033[0;36m'
-White='\033[0;37m'
 echo "LHOST WHOST LHBind WHBind"|sed 's# #\n#g'|sed "s#^#$(tput setaf 2)[$(tput sgr0)$(tput setaf 10)✔$(tput sgr0)$(tput setaf 2)]$(tput sgr0) #g"
 echo -en "$(tput setaf 2)[$(tput sgr0)$(tput setaf 10)✔$(tput sgr0)$(tput setaf 2)]$(tput sgr0) Please type input: "
 read op
@@ -65,53 +104,6 @@ esac
 
 }
 
-installedver()
-{
-cat $HOME/metasploit-framework/Gemfile.lock|grep metasploit-framework|head -1|sed 's/ //g'|tr '[:lower:]' '[:upper:]'|sed 's#(# #g;s#)##g;s# #: #g'|awk '{print $2}'
-}
-
-versioncheckplusupdate()
-{
-clear='\033[0m'
-Black='\033[0;30m'
-Red='\033[0;31m'
-Green='\033[0;32m'
-Yellow='\033[0;33m'
-Blue='\033[0;34m'
-Purple='\033[0;35m'
-Cyan='\033[0;36m'
-White='\033[0;37m'
-
-latest=$(latestver)
-instal=$(installedver)
-if [ "$latest" == "$instal" ]; then
-echo -e "[${Green}+${clear}] Checking for metasploit updates..."
-sleep 4
-printf "[${Green}+${clear}] Metasploit-Framework latest version installed: ";curl https://raw.githubusercontent.com/rapid7/metasploit-framework/master/Gemfile.lock -s|grep metasploit-framework|head -1|sed 's/ //g'|tr '[:lower:]' '[:upper:]'|sed 's#(# #g;s#)##g;s# #: #g'|awk '{print "\033[0;32m"$2 "\033[0m"}'
-echo
-
-else
-echo -e "[${Green}+${clear}] Checking for metasploit updates...";sleep 4;echo -e -e "[${Green}+${clear}] Update found: \c ";curl https://raw.githubusercontent.com/rapid7/metasploit-framework/master/Gemfile.lock -s|grep metasploit-framework|head -1|sed 's/ //g'|tr '[:lower:]' '[:upper:]'|sed 's#(# #g;s#)##g;s# #: #g'|awk '{print "\033[0;31m"$2 "\033[0m"}'
-
-#Install latest version
-echo -en "[${Green}+${clear}] Would you like to update? yY/nN: "
-read upd
-if [ "$upd" == "y" ]; then
-echo -e "[${Green}+${clear}] Okay"
-sleep 1
-echo -e "[${Green}+${clear}] calling script..."
-sleep 3
-echo -e "[${Green}+${clear}] lets install metasploit $latest "
-sleep 3
-source <(curl -fsSl https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/metasploit-6-termux.sh)
-else
-echo "No problem see you again :)"
-fi
-fi
-}
-
-
-#---------------------------------------------------------variables
 
 if [[ $1 == "check" || $1 == "01" ]];
 then
@@ -119,7 +111,7 @@ versioncheckplusupdate 2> /dev/null
   
 elif [[ $1 == "install" || $soun == "02" ]];
 then
- source <(curl -fsSL https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/metasploit-6-termux.sh) 
+isntaal
 
 elif [[ $1 == "-help" || $1 == "03" ]];
 then
