@@ -29,6 +29,7 @@ latestver()
 {
 curl https://raw.githubusercontent.com/rapid7/metasploit-framework/master/Gemfile.lock -s|grep metasploit-framework|head -1|sed 's/ //g'|tr '[:lower:]' '[:upper:]'|sed 's#(# #g;s#)##g;s# #: #g'|awk '{print $2}'
 }
+
 installedver()
 {
 ctermuxorlinux=$(which bash|grep -o termux)
