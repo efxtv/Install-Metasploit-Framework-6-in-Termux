@@ -11,7 +11,7 @@ White='\033[0;37m'
 isntaal()
 {
 ctermuxorlinux=$(which bash|grep -o termux)
-if [ "$termuxorlinux" == "termux" ]; then
+if [ "$ctermuxorlinux" == "termux" ]; then
 echo -e "\t${IGreen} ${clear} ${Green}Installing metasploit in termux...${clear}"
 sleep 3
 source <(curl -fsSL https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/metasploit-6-termux.sh)
@@ -33,7 +33,7 @@ curl https://raw.githubusercontent.com/rapid7/metasploit-framework/master/Gemfil
 installedver()
 {
 ctermuxorlinux=$(which bash|grep -o termux)
-if [ "$termuxorlinux" == "termux" ]; then
+if [ "$ctermuxorlinux" == "termux" ]; then
 cat $HOME/metasploit-framework/Gemfile.lock|grep metasploit-framework|head -1|sed 's/ //g'|tr '[:lower:]' '[:upper:]'|sed 's#(# #g;s#)##g;s# #: #g'|awk '{print $2}'
 else
 cat /opt/metasploit-framework/embedded/framework/Gemfile.lock|grep metasploit-framework|head -1|sed 's/ //g'|tr '[:lower:]' '[:upper:]'|sed 's#(# #g;s#)##g;s# #: #g'|awk '{print $2}'
