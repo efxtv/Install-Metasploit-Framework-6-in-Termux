@@ -1,6 +1,6 @@
 # Install Metasploit In Termux Without Error 2022 uk2blogger
  
-<b>Step 1</b> Download or update Termux and Termux API from <a href="https://youtu.be/j7PCscyOxgM" target="_blank">F-Droid</a>
+<b>Step 1</b> Download or update Termux and Termux API from <a href="https://youtu.be/j7PCscyOxgM" target="_blank">F-Droid</a><br>
 You can also chekc our L3MON Termux repository. Fully working 2022 trick <a href="https://github.com/efxtv/L3MON" target="_blank">L3MON IN TERMUX SIGNED APK</a>
 
 <b>Step 2</b> Copy paste the script in your termux. Update upgrade not required
