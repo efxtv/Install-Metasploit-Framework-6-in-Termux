@@ -1,19 +1,16 @@
-# Install Metasploit In Termux Without Error 2022 uk2blogger
+# Install Metasploit In Termux
  
 <b>Step 1</b> Download or update Termux and Termux API from <a href="https://youtu.be/j7PCscyOxgM" target="_blank">F-Droid</a><br>
 You can also chekc our L3MON Termux repository. Fully working 2022 trick <a href="https://github.com/efxtv/L3MON" target="_blank">L3MON IN TERMUX SIGNED APK</a>
 
 <b>Step 2</b> Copy paste the script in your termux. Update upgrade not required
 
-To Install Metasploit  In Termux Without Error this time you do not have to refresh your termux. Just copy paste the command and wait for it.
-
+# How to Install Metasploit 6 
 <pre><code> source <(curl -fsSL https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/metasploit-6-termux.sh) </code></pre>
 
 
-
-If you already have installed metasploit6 in termux and you want metasploit with updated version must give it a try.
-# Metasploit6 updater for termux
-<pre><code>curl -L -o $PWD/mversion https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Scripts/mversion -s;chmod +x mversion;mv mversion ../usr/bin/;mversion</code></pre>
+# How to upddate Metasploit 6 in Termux
+<pre><code>curl -L -o $PWD/mversion https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Scripts/mversion -s;chmod +x mversion;mv mversion ../usr/bin/;mversion -help</code></pre>
 
 <img src="https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Demo-Screenshots/metasploit-6.1.41.png" alt="Metasploit in termux- Metasploit benner v6.1.41-dev" style="width:100%"><br><br>
 <img src="https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/Demo-Screenshots/metasploit-6.1.40.jpg" alt="Metasploit in termux- Metasploit benner v6.1.40-dev" style="width:100%"><br><br>
