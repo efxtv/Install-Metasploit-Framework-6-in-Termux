@@ -76,7 +76,7 @@ help()
 echo -e "${Green} -${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}- ${clear}"
 echo -e "${Green}[ ${Yellow}Metasploit update${clear}${Green} ]${clear}"
 echo -e "${Green} -${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}- ${clear}"
-echo "help check install demo"|sed 's# #\n#g'|sed "s#^#$(tput setaf 2)[$(tput sgr0)$(tput setaf 10)✔$(tput sgr0)$(tput setaf 2)]$(tput sgr0) #g"
+echo "help check install demo"|sed 's# #\n#g'|sed "s#^#$(tput setaf 2)[$(tput sgr0)$(tput setaf 10)✔$(tput sgr0)$(tput setaf 2)] mversion$(tput sgr0) #g"
 }
 
 demo()
