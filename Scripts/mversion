@@ -112,7 +112,8 @@ versioncheckplusupdate 2> /dev/null
   
 elif [[ $1 == "install" || $soun == "02" ]];
 then
-isntaal
+#isntaal
+echo "Working on it"
 
 elif [[ $1 == "-help" || $1 == "03" ]];
 then
