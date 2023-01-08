@@ -34,7 +34,7 @@ installedver()
 {
 ctermuxorlinux=$(which bash|grep -o termux)
 if [ "$ctermuxorlinux" == "termux" ]; then
-cat $HOME/metasploit-framework/Gemfile.lock|grep metasploit-framework|head -1|sed 's/ //g'|tr '[:lower:]' '[:upper:]'|sed 's#(# #g;s#)##g;s# #: #g'|awk '{print $2}'
+cat $PREFIX/opt/metasploit-framework/Gemfile.lock|grep metasploit-framework|head -1|sed 's/ //g'|tr '[:lower:]' '[:upper:]'|sed 's#(# #g;s#)##g;s# #: #g'|awk '{print $2}'
 else
 cat /opt/metasploit-framework/embedded/framework/Gemfile.lock|grep metasploit-framework|head -1|sed 's/ //g'|tr '[:lower:]' '[:upper:]'|sed 's#(# #g;s#)##g;s# #: #g'|awk '{print $2}'
 
@@ -112,8 +112,8 @@ versioncheckplusupdate 2> /dev/null
   
 elif [[ $1 == "install" || $soun == "02" ]];
 then
-#isntaal
-echo "Working on it"
+source <(curl -fsSl https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/metasploit-termux-fix-2023.sh)
+rm $HOME/metasploit-termux-fix-2023.sh 2>.log.txt
 
 elif [[ $1 == "-help" || $1 == "03" ]];
 then
