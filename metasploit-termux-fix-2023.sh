@@ -21,7 +21,7 @@ echo -e "
                   ${Green}[ ${Yellow}t.me/efxtv${clear} ${Green}]${clear}
 "
 echo -e "[${Green}+${clear}] Latest version found ${Red}\c";latestverr
-echo -e "[${Green}+${clear}] No clean..."
+echo -e "${clear}[${Green}+${clear}] No clean..."
 sleep 1
 echo -e "[${Green}+${clear}] No Gem Problem..."
 sleep 1
@@ -115,6 +115,9 @@ bundle install -j$(nproc --all)
 if [ -e $PREFIX/bin/msfconsole ];then
 	rm $PREFIX/bin/msfconsole
 fi
+if [ -e $PREFIX/bin/msfdb ];then
+	rm $PREFIX/bin/msfdb
+fi
 if [ -e $PREFIX/bin/msfvenom ];then
 	rm $PREFIX/bin/msfvenom
 fi
@@ -139,7 +142,7 @@ termux-elf-cleaner $PREFIX/lib/ruby/gems/*/gems/pg-*/lib/pg_ext.so
 echo
 
 # Warning occurs during payload generation
-sed -i '86 {s/^/#/};96 {s/^/#/}' $PREFIX/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.0.5/lib/concurrent/atomic/ruby_thread_local_var.rb
-sed -i '442, 476 {s/^/#/};436, 438 {s/^/#/}' $PREFIX/lib/ruby/gems/3.1.0/gems/logging-2.3.1/lib/logging/diagnostic_context.rb
+#sed -i '86 {s/^/#/};96 {s/^/#/}' $PREFIX/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.0.5/lib/concurrent/atomic/ruby_thread_local_var.rb
+#sed -i '442, 476 {s/^/#/};436, 438 {s/^/#/}' $PREFIX/lib/ruby/gems/3.1.0/gems/logging-2.3.1/lib/logging/diagnostic_context.rb
 echo -e "[${Green}+${clear}] Watch full video to fix ${Blue}LinkHere"
 echo -e "[${Green}+${clear}] You can start msfconsole"
