@@ -29,12 +29,7 @@ echo -e "[${Green}+${clear}] Nokogiri fixed..."
 sleep 1
 echo -e "[${Green}+${clear}] Follow the video shared in ${Yellow}t.me/efxtv ${clear}"
 sleep 1
-echo -e "[${Green}+${clear}] Removing ${Red}metasploit-framework${clear} directory."
 cd $HOME
-rm -rf metasploit-framework 2>.log.txt
-mkdir metasploit-framework 2>.log.txt
-rm -rf $PREFIX/opt/metasploit-framework 2>.log.txt
-
 echo -e "[${Green}+${clear}] Done..."
 
 echo
