@@ -62,7 +62,7 @@ echo -e "[${Yellow}+${clear}] Loading..."
 sleep 1
 
 echo -e "[${Yellow}+${clear}] Removing old repository..."
-rm $PREFIX/etc/apt/sources.list.d/*
+rm $PREFIX/etc/apt/sources.list.d/* 2>.log.txt
 
 echo -e "[${Yellow}+${clear}] Repository signature..."
 # pkg install -y gnupg
@@ -70,7 +70,7 @@ echo -e "[${Yellow}+${clear}] Repository signature..."
 echo -e "[${Yellow}+${clear}] Ruby purge..."
 sleep 1
 apt purge ruby -y
-rm -fr $PREFIX/lib/ruby/gems
+rm -fr $PREFIX/lib/ruby/gems 2>.log.txt
 
 pkg upgrade -y -o Dpkg::Options::="--force-confnew"
 
@@ -83,8 +83,9 @@ python3 -m pip install requests
 
 source <(curl -sL https://github.com/termux/termux-packages/files/2912002/fix-ruby-bigdecimal.sh.txt)
 
-rm -rf $PREFIX/opt/metasploit-framework
-m -rf $HOME/metasploit-framework 2>.log.txt
+rm -rf $PREFIX/opt/metasploit-framework 2>.log.txt
+sleep 3
+rm -rf $HOME/metasploit-framework 2>.log.txt
 
 echo
 echo -e "[${Yellow}+${clear}] Downloading Metasploit termux...\c";latestverr
@@ -113,6 +114,8 @@ bundle install -j$(nproc --all)
 #$PREFIX/bin/find -type f -executable -exec termux-fix-shebang \{\} \;
 # rm ./modules/auxiliary/gather/http_pdf_authors.rb
 rm $PREFIX/bin/msf* 2>.log.txt
+echo -e "[${Green}+${clear}] Please wait...."
+sleep 3
 echo -e "[${Green}+${clear}] Soft Link msfconsole"
 sleep 1
 ln -s $PREFIX/opt/metasploit-framework/msfconsole $PREFIX/bin/
