@@ -112,18 +112,7 @@ bundle install -j$(nproc --all)
 
 #$PREFIX/bin/find -type f -executable -exec termux-fix-shebang \{\} \;
 # rm ./modules/auxiliary/gather/http_pdf_authors.rb
-if [ -e $PREFIX/bin/msfconsole ];then
-	rm $PREFIX/bin/msfconsole
-fi
-if [ -e $PREFIX/bin/msfdb ];then
-	rm $PREFIX/bin/msfdb
-fi
-if [ -e $PREFIX/bin/msfvenom ];then
-	rm $PREFIX/bin/msfvenom
-fi
-if [ -e $PREFIX/bin/msfrpcd ];then
-	rm $PREFIX/bin/msfrpcd
-fi
+rm $PREFIX/bin/msf* 2>.log.txt
 echo -e "[${Green}+${clear}] Soft Link msfconsole"
 sleep 1
 ln -s $PREFIX/opt/metasploit-framework/msfconsole $PREFIX/bin/
