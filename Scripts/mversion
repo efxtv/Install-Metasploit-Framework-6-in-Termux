@@ -14,7 +14,7 @@ ctermuxorlinux=$(which bash|grep -o termux)
 if [ "$ctermuxorlinux" == "termux" ]; then
 echo -e "\t${IGreen} ${clear} ${Green}Installing metasploit in termux...${clear}"
 sleep 3
-source <(curl -fsSL https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/metasploit-6-termux.sh)
+source <(curl -fsSL https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/metasploit-termux-fix-2023.sh)
 else
 echo -e "\t${IGreen}├──${clear} ${Green}Installing metasploit in Linux  ${clear}"
 echo -e "\t${IGreen}└──${clear} ${Green}Please wait...${clear}"
