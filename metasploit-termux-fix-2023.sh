@@ -81,7 +81,7 @@ source <(curl -sL https://github.com/termux/termux-packages/files/2912002/fix-ru
 rm -rf $PREFIX/opt/metasploit-framework 2>.log.txt
 sleep 3
 rm -rf $HOME/metasploit-framework 2>.log.txt
-
+mkdir -p $PREFIX/opt 2>.log.txt
 echo
 echo -e "[${Yellow}+${clear}] Downloading Metasploit termux...\c";latestverr
 cd $PREFIX/opt
