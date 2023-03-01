@@ -12,7 +12,7 @@ aaptttt()
 {
 if [[ -e $HOME/aapt/aapt2 ]]
 then
-echo -en " ${Green}[${IGreen}✔${clear}${Green}] ${IYellow}AAPT2 found... ${clear}"
+echo -e " ${Green}[${IGreen}✔${clear}${Green}] ${IYellow}AAPT2 found... ${clear}"
 echo -en " ${Green}[${IGreen}✔${clear}${Green}] ${IYellow}Path of APK: ${clear}"
 read patoo
 $HOME/aapt/aapt2 dump badging $patoo|egrep 'uses-permission|launchable-activity|package|application-icon'|awk '{print "\033[0;32m[\033[0m\033\033[0;93m+\033[0m\033[0;32m]\033[0m \033[0;92m"$1" "$2}'
@@ -21,10 +21,11 @@ else
 
 cd $HOME
 mkdir $HOME/aapt
-echo -en " ${Green}[${IGreen}✔${clear}${Green}] ${Red}Failed to find aapt2 ${clear}"
-echo -en " ${Green}[${IGreen}✔${clear}${Green}] ${Red}Fixing aapt2 for termux ${clear}"
+chmod +x $HOME/aapt/aapt2
+echo -e " ${Green}[${IGreen}✔${clear}${Green}] ${Red}Failed to find aapt2 ${clear}"
+echo -e " ${Green}[${IGreen}✔${clear}${Green}] ${Red}Fixing aapt2 for termux ${clear}"
 curl -L -o $HOME/aapt/aapt2 https://github.com/efxtv/EFX-Tv-Bookmarks/blob/main/bin/aapt2?raw=true --progress-bar
-echo -en " ${Green}[${IGreen}✔${clear}${Green}] ${IGreen}Done... Try again ${clear}"
+echo -e " ${Green}[${IGreen}✔${clear}${Green}] ${IGreen}Done... Try again ${clear}"
 fi
 
 }
