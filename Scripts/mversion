@@ -8,6 +8,27 @@ Blue='\033[0;34m'
 Purple='\033[0;35m'
 Cyan='\033[0;36m'
 White='\033[0;37m'
+aaptttt()
+{
+if [[ -e $HOME/aapt/aapt2 ]]
+then
+echo -en " ${Green}[${IGreen}✔${clear}${Green}] ${IYellow}AAPT2 found... ${clear}"
+echo -en " ${Green}[${IGreen}✔${clear}${Green}] ${IYellow}Path of APK: ${clear}"
+read patoo
+$HOME/aapt/aapt2 dump badging $patoo|egrep 'uses-permission|launchable-activity|package|application-icon'|awk '{print "\033[0;32m[\033[0m\033\033[0;93m+\033[0m\033[0;32m]\033[0m \033[0;92m"$1" "$2}'
+
+else
+
+cd $HOME
+mkdir $HOME/aapt
+echo -en " ${Green}[${IGreen}✔${clear}${Green}] ${Red}Failed to find aapt2 ${clear}"
+echo -en " ${Green}[${IGreen}✔${clear}${Green}] ${Red}Fixing aapt2 for termux ${clear}"
+curl -L -o $HOME/aapt/aapt2 https://github.com/efxtv/EFX-Tv-Bookmarks/blob/main/bin/aapt2?raw=true --progress-bar
+echo -en " ${Green}[${IGreen}✔${clear}${Green}] ${IGreen}Done... Try again ${clear}"
+fi
+
+}
+
 isntaal()
 {
 ctermuxorlinux=$(which bash|grep -o termux)
@@ -76,7 +97,7 @@ help()
 echo -e "${Green} -${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}- ${clear}"
 echo -e "${Green}[ ${Yellow}Metasploit update${clear}${Green} ]${clear}"
 echo -e "${Green} -${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}-${Yellow}-${Red}- ${clear}"
-echo "help check install demo"|sed 's# #\n#g'|sed "s#^#$(tput setaf 2)[$(tput sgr0)$(tput setaf 10)✔$(tput sgr0)$(tput setaf 2)] mversion$(tput sgr0) #g"
+echo "help check install demo hook"|sed 's# #\n#g'|sed "s#^#$(tput setaf 2)[$(tput sgr0)$(tput setaf 10)✔$(tput sgr0)$(tput setaf 2)] mversion$(tput sgr0) #g"
 }
 
 demo()
@@ -122,6 +143,10 @@ help
 elif [[ $1 == "demo" || $1 == "04" ]];
 then
 demo
+
+elif [[ $1 == "hook" || $1 == "05" ]];
+then
+aaptttt
 
 else
 echo "Wrong input use -help for more"
