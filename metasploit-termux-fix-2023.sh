@@ -27,6 +27,8 @@ echo -e "[${Green}+${clear}] No Gem Problem..."
 sleep 1
 echo -e "[${Green}+${clear}] Nokogiri fixed..."
 sleep 1
+echo -e "[${Green}+${clear}] ${Green}nio4r 2.5.8${clear} fixed..."
+sleep 1
 echo -e "[${Green}+${clear}] Follow the video shared in ${Yellow}t.me/efxtv ${clear}"
 sleep 1
 cd $HOME
