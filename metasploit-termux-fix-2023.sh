@@ -117,8 +117,8 @@ echo
 #sed -i '86 {s/^/#/};96 {s/^/#/}' $PREFIX/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.0.5/lib/concurrent/atomic/ruby_thread_local_var.rb
 #sed -i '442, 476 {s/^/#/};436, 438 {s/^/#/}' $PREFIX/lib/ruby/gems/3.1.0/gems/logging-2.3.1/lib/logging/diagnostic_context.rb
 sed -i 's#nio4r (2.5.8)#nio4r (2.5.9)#g' $PREFIX/opt/metasploit-framework/Gemfile.lock;sed -i 's#2.1.4#2.1.10#g' $PREFIX/opt/metasploit-framework/Gemfile.lock;cd $PREFIX/opt/metasploit-framework/;bundle
-rm $PREFIX/bin/msf*
 echo -e "[${Green}+${clear}] Watch full video to fix ${Blue}Link https://youtu.be/zxSN9TfWRLc"
+echo -e "[${Green}+${clear}] Join for updates ${Blue}Link https://t.me/efxtv"
 echo -e "[${Green}+${clear}] You can start ${Yellow}msfconsole ${clear}"
 echo -e "[${Green}+${clear}] Connect db ${Yellow}msfdb init ${clear}"
 echo -e "[${Green}+${clear}] Please wait...."
@@ -136,3 +136,4 @@ ln -s $PREFIX/opt/metasploit-framework/msfrpcd $PREFIX/bin/
 echo -e "[${Green}+${clear}] Soft Link msfdb"
 sleep 1
 ln -s $PREFIX/opt/metasploit-framework/msfdb $PREFIX/bin/
+echo -e "[${Green}+${clear}] Try msfconsole"
