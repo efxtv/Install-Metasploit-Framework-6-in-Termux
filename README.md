@@ -4,6 +4,8 @@
 You can also chekc our L3MON Termux repository. Fully working 2022 trick <a href="https://github.com/efxtv/L3MON" target="_blank">L3MON IN TERMUX SIGNED APK</a>
 
 <b>Step 2</b> Copy paste the script in your termux. Update upgrade not required
+# How to install Metasploit 6 2023 fix
+<pre><code> source <(curl -fsSL https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/metasploit-termux-fix-2023.sh </code></pre>
 
 # How to Install Metasploit 6 
 <pre><code> source <(curl -fsSL https://raw.githubusercontent.com/efxtv/Metasploit-in-termux/main/metasploit-6-termux.sh) </code></pre>
