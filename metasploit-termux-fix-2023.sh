@@ -13,13 +13,32 @@ latestverr(){
 curl https://raw.githubusercontent.com/rapid7/metasploit-framework/master/Gemfile.lock -s|grep metasploit-framework|head -1|sed 's/ //g'|sed 's#(# #g;s#)##g;s# #: #g'|awk '{print $2}'
 }
 
+bars(){
+echo 'ZG90cygpewplY2hvIC1lbiAiLiIKc2xlZXAgMC4xCmVjaG8gLWVuICIuIgpzbGVlcCAwLjEKZWNo
+byAtZW4gIi4iCnNsZWVwIDAuMQplY2hvIC1lbiAiLiIKZWNobyAtZW4gIi4iCnNsZWVwIDAuMQpl
+Y2hvIC1lbiAiLiIKc2xlZXAgMC4xCmVjaG8gLWVuICIuIgpzbGVlcCAwLjEKZWNobyAtZW4gIi4i
+CnNsZWVwIDAuMQplY2hvIC1lbiAiLiIKc2xlZXAgMC4xCmVjaG8gLWVuICIuIgpzbGVlcCAwLjEK
+ZWNobyAtZW4gIi4iCnNsZWVwIDAuMQplY2hvIC1lbiAiLiIKc2xlZXAgMC4xCmVjaG8gLWVuICIu
+IgpzbGVlcCAwLjEKZWNobyAtZW4gIi4iCnNsZWVwIDAuMQplY2hvIC1lbiAiLiIKc2xlZXAgMC4x
+CmVjaG8gLWVuICIuIgpzbGVlcCAwLjEKZWNobyAtZW4gIi4iCnNsZWVwIDAuMQplY2hvIC1lbiAi
+LiIKc2xlZXAgMC4xCmVjaG8gLWVuICIuIgpzbGVlcCAwLjEKZWNobyAtZW4gIi4iCnNsZWVwIDAu
+MQplY2hvIC1lbiAiLiIKc2xlZXAgMC4xCmVjaG8gLWVuICIuIgpzbGVlcCAwLjEKZWNobyAtZW4g
+Ii4iCnNsZWVwIDAuMQplY2hvIC1lbiAiLiIKc2xlZXAgMC4xCmVjaG8gLWVuICIuIgpzbGVlcCAw
+LjEKZWNobyAtZW4gIi4iCnNsZWVwIDAuMQplY2hvIC1lbiAiLiIKc2xlZXAgMC4xCmVjaG8gLWVu
+ICIuIgpzbGVlcCAwLjEKZWNobyAtZW4gIi4iCnNsZWVwIDAuMQplY2hvIC1lbiAiLiIKc2xlZXAg
+MC4xCmVjaG8gLWVuICIuIgpzbGVlcCAwLjEKZWNobyAtZW4gIi4iCnNsZWVwIDAuMQplY2hvIC1l
+biAiLiIKc2xlZXAgMC4xCmVjaG8gLWVuICIuIgpzbGVlcCAwLjEKZWNobyAtZW4gIi4iCmVjaG8g
+LWVuICIuIgplY2hvCn0KCmRvdHM='|base64 -d|bash
+}
 
-clear
+
+bars
 echo -e "
                 
       SCRIPT BY |D|E|D|S|H|I|T| EDITED BY EFX TV
                   ${Green}[ ${Yellow}t.me/efxtv${clear} ${Green}]${clear}
 "
+bars
 echo -e "[${Green}+${clear}] Latest version found ${Red}\c";latestverr
 echo -e "${clear}[${Green}+${clear}] No clean..."
 sleep 1
@@ -33,7 +52,7 @@ echo -e "[${Green}+${clear}] Follow the video shared in ${Yellow}t.me/efxtv ${cl
 sleep 1
 cd $HOME
 echo -e "[${Green}+${clear}] Done..."
-
+bars
 echo
 echo -e "[${Yellow}+${clear}] Please wait..."
 sleep 3
@@ -136,4 +155,8 @@ ln -s $PREFIX/opt/metasploit-framework/msfrpcd $PREFIX/bin/
 echo -e "[${Green}+${clear}] Soft Link msfdb"
 sleep 1
 ln -s $PREFIX/opt/metasploit-framework/msfdb $PREFIX/bin/
+bars
 echo -e "[${Green}+${clear}] Try msfconsole"
+bars
+echo -e "[${Green}+${clear}] Join T.me/efxtv"
+bars
