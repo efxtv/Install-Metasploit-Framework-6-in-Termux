@@ -1,6 +1,9 @@
 #!/data/data/com.termux/files/usr/bin/bash
+# Updated from metasploit v6.4.143-dev-08018df9
+# Install mversion to use better
+# Join t.me/efxtv
 
-set -e
+set -e 
 
 # Colors
 clear='\033[0m'
